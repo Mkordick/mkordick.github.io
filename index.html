@@ -1,116 +1,92 @@
+ <!--
+      Matt kordick 9/17/16
+
 <!DOCTYPE html>
 <html>
-
    <head>
-   <!--
-      New Perspectives on HTML
-      Tutorial 2
+   
+      New Perspectives on HTML and CSS
+      Tutorial 3
       Case Problem 1
 
-      Wisconsin Colleges and Universities
+      ICI Home Page
       Author:
       Date:
 
-
-      Filename:         uwlist.htm
-      Supporting files: hestyles.css, highered.jpg, modernizr-1.5.js
+      Filename:         crypt.htm
+      Supporting files: c_styles.css, c_layout.css, locks.jpg,
+                        modernizr-1.5.js, scytale.gif,
    -->
 
-      <head>
-     <base target="winCollege" />
-      </head>
-      <meta charset="UTF-8" />
-      <title>Wisconsin Colleges and Universities</title>
 
+      <meta charset="UTF-8" />
+      <title>International Cryptographic Institute</title>
       <script src="modernizr-1.5.js"></script>
-      <link href="hestyles.css" rel="stylesheet" type="text/css" />
 
    </head>
-
+  <link href="c_styles.css" rel="stylesheet" type="text/css" />
    <body>
-
       <header>
-         <img src="highered.jpg" alt="Higher Education" />
+         <h1>
+            THE&nbsp;<br />
+            SCIENCE<br />
+            &nbsp;&nbsp;OF<br />
+            CRYPTOGRAPHY
+         </h1>
       </header>
 
-      <section>
+      <article>
+         <h2>What is Cryptography?</h2>
+         <p>
+            <strong class="keyword">Cryptography</strong> is the science
+            of secure communications, formed from the Greek words
+            <em>krypt&#243;s</em> meaning "hidden" and <i>l&#243;gos</i>,
+            meaning "word." The first recorded use of cryptography
+            was by the Spartans who as early as 400 BC employed a cipher
+            device called a <strong class="keyword">scytale</strong> to
+            send secret communications between military
+            commanders. The scytale consisted of a tapered baton around which
+            was wrapped a piece of parchment inscribed with the message. Once
+            unwrapped the parchment appeared to contain an incomprehensible
+            set of letters; however when wrapped around another baton of
+            identical size the original text appears.
+            <img src="scytale.gif" alt="image" width="250" height="69"/>
+         </p>
 
-         <h1>Wisconsin Colleges and Universities</h1>
-         <nav>
-          <ul>
-            <a  target="_self" href="index.html#private" </a><li>Private Colleges and Universities</li>
-            <a  target="_self"href="index.html#technical" target=_parent</a><li>Technical College System</li>
-            <a href="index.html#public" target="_self"</a><li>University of Wisconsin System</li>
-          </ul>
-        </nav>
-         <h2 id="private">Private Colleges and Universities</h2>
-         <ul>
-            <li><a href="http://www.alverno.edu"</a>Alverno College</li>
-            <li><a href="http://www.beloit.edu"</a>Beloit College</li>
-            <li><a href="http://www.stritch.edu"</a><li>Cardinal Stritch University</li></a>
-            <li><a href="http://www.cc.edu"</a>Carroll College</li>
-            <li><a href="http://www.cuw.edu"</a>Concordia University Wisconsin</li>
-            <li><a href="http://www.edgewood.edu"</a>Edgewood College</li>
-            <li><a href="http://www.lakeland.edu"</a>Lakeland College</li>
-            <li><a href="http://www.lawrence.edu"</a>Lawrence University
-            <li><a href="http://www.mariancollege.edu"</a>Marian College</li>
-            <li><a href="http://www.mcw.edu"</a>Medical College of Wisconsin</li>
-            <li><a href="http://www.miad.edu"</a>Milwaukee Institute of Art and Design</li>
-            <li><a href="http://www.msoe.edu"</a>Milwaukee School of Engineering</li>
-            <li><a href="http://www.mtmary.edu"</a>Mount Mary College</li>
-            <li><a href="http://www.mu.edu"</a>Marquette University</li>
-            <li><a href="http://www.mu.edu"<a href=""</a>Marquette University Law School</li>
-            <li><a href=" http://www.nashotah.edu"</a>Nashotah House</li>
-            <li><a href="http://www.nbbc.edu"</a>Northland Baptist Bible College</li>
-            <li><a href="http://www.northland.edu"</a>Northland College</li>
-            <li><a href="http://www.ripon.edu"</a>Ripon College</li>
-            <li><a href="http://www.shsst.edu"</a>Sacred Heart School of Theology</li>
-            <li><a href="http://www.sl.edu"</a>Silver Lake College</li>
-            <li><a href="http://www.snc.edu"</a>St. Norbert College</li>
-            <li><a href="http://www.viterbo.edu"</a>Viterbo University</li>
-            <li><a href="http://www.wlc.edu"</a>Wisconsin Lutheran College</li>
-         </ul>
+         <p>Cryptographers developed more and more ingenious systems,
+            but it was in the 20<sup>th</sup> Century that the science
+            of cryptography took off. The first major achievement was the
+            development of rotor cipher machines. An American, Edward Hebern
+            recognized that by hardwiring alphabetic substitution in
+            the connections from one side of an electrical rotor to those
+            on the other side and cascading a collection of such rotors,
+            alphabetic substitutions of almost any complexity could be
+            produced. German engineers independently discovered the rotor
+            concept and designed the precursors to the most famous cipher
+            machine in history &ndash; the German
+            <strong class="keyword">Enigma Machine</strong> which was
+            used during World War II. The cracking
+            of the Enigma ciphers by British and Polish cryptanalysts is
+            one of the greatest triumphs in the history of cryptography
+            and played an important role in the Allied victory.
+         </p>
+      </article>
 
-         <h2 id="technical">Technical College System</h2>
-         <ul>
-         <li><a href="http://www.blackhawk.edu"</a>Blackhawk Technical College</li>
-         <li><a href="http://www.cvtc.edu"</a>Chippewa Valley Technical College</li>
-         <li><a href="http://www.fvtc.edu"</a>Fox Valley Technical College</li>
-         <li><a href="http://www.gtc.edu"</a>Gateway Technical College</li>
-         <li><a href="http://www.gotoltc.edu"</a>Lakeshore Technical College</li>
-         <li><a href="https://madisoncollege.edu/"</a>Madison Area Technical College</li>
-         <li><a href="http://www.mstc.edu"</a>Mid-State Technical College</li>
-         <li><a href="http://www.matc.edu"</a>Milwaukee Area Technical College</li>
-         <li><a href="http://www.morainepark.edu"</a>Moraine Park Technical College</li>
-         <li><a href="http://www.nicoletcollege.edu"</a>Nicolet Area Technical College</li>
-         <li><a href="http://www.ntc.edu"</a>Northcentral Technical College</li>
-         <li><a href="http://www.nwtc.edu"</a>Northeast Wisconsin Technical College</li>
-         <li><a href="http://www.swtc.edu"</a>Southwest Wisconsin Technical College</li>
-         <li><a href="http://www.wctc.edu"</a>Waukesha County Technical College</li>
-         <li><a href="http://www.westerntc.edu"</a>Western Technical College</li>
-         <li><a href="http://www.witc.edu"</a>Wisconsin Indianhead Technical College</li>
-         </ul>
+      <footer>
+         <hr />
+         <p>
+            To learn more cryptography, please tour the site.<br />
+            <img src="locks.jpg" alt="lock links" width="510" height="110" usemap="locks" />
 
-         <h2 id=public>University of Wisconsin System</h2>
-         <ul>
-            <li><a href="http://www.uwgb.edu"</a>UW-Green Bay</li>
-            <li><a href="http://www.uwlax.edu"</a>UW-La Crosse</li>
-            <li><a href="http://www.wisc.edu"</a>UW-Madison</li>
-            <li><a href="http://www.uwm.edu"</a>UW-Milwaukee</li>
-            <li><a href="http://www.uwosh.edu"</a>UW-Oshkosh</li>
-            <li><a href="http://www.uwp.edu"</a>UW-Parkside</li>
-            <li><a href="http://www.uwplatt.edu"</a>UW-Platteville</li>
-            <li><a href="http://www.uwrf.edu"</a>UW-River Falls</li>
-            <li><a href="https://www.uwsp.edu"</a>UW-Stevens Point</li>
-            <li><a href="http://www.uwstout.edu"</a>UW-Stout</li>
-            <li><a href="http://www.uwsuper.edu"</a>UW-Superior</li>
-            <li><a href="http://www.uww.edu"</a>UW-Whitewater</li>
-         </ul>
+            <map name="locks">
+              <area shape="circle" coords="52,52,43" href="history.htm" alt="History">
+              <area shape="circle" coords="155,52,43" href="enigma.htm" alt="Enigma">
+              <area shape="circle" coords="255,52,43" href="algo.htm" alt="Algorithms">
+              <area shape="circle" coords="355,52,43" href="single.htm" alt="Single Key">
+              <area shape="circle" coords="455,52,43" href="public.htm" alt="Public Key">
 
-         <footer>
-            Higher &#9830; Ed: The Directory of Higher Education Opportunities
-         </footer>
-      </section>
+         </p>
+      </footer>
 
    </body>
 
