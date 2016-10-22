@@ -1,0 +1,57 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 8
+   Case Problem 1
+
+   dessertWeb Print Styles
+   Author: matt Kordick
+   Date:   10/21/16
+
+   Filename:         dwprint.css
+   Supporting Files:
+
+*/
+
+
+@page{
+
+  margin: 0.5in
+}
+
+
+header{
+  display:none;
+}
+nav{
+  display: none;
+}
+body.left{
+  display: none;
+}
+body.right{
+  display: none;
+}
+aside{
+  display: none;
+}
+header h2{
+  display: none;
+}
+footer{
+  display: none;
+}
+h1{
+  font-size: 200%;
+  margin-bottom: 0.2in;
+}
+h2{
+  font-size: 150%;
+  margin-top: 0.5in;
+}
+li{
+  line-height: 1.5em;
+}
+ol{
+  margin-left: 0.5in;
+
+}
