@@ -1,0 +1,21 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 8
+   Case Problem 2
+
+   Special Effects style sheet
+   Author: Matt Kordick
+   Date:   10/21/16
+
+   Filename:         wceffects.css
+   Supporting Files:
+
+*/
+body{
+  box-shadow: 20px 0px 25px rgba(31,61,31,0.9)  , -20px 0px 25px rgba(31, 61, 31,0.9);
+}
+aside div{
+  opacity: 75%;
+  filter: Alpha opacity(75);
+  box-shadow: 5px 5px 10px rgba(101,101,101,0.7);
+  }
