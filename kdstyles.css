@@ -1,0 +1,33 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 9
+   Case Problem 1
+
+   Kelsey's Diner Style Sheet
+
+   Author:
+   Date:
+
+   Filename:         kdstyles.css
+   Supporting Files:
+
+*/
+
+img {
+   border-width: 0px;
+}
+body{
+  background-image: url("tan.jpg");
+}
+h5{
+text-align: center;
+}
+ h1{
+  color: green;
+  text-align: center;
+}
+b{
+  font: "sans-serif";
+  font-weight: bold;
+   color: green;
+}
