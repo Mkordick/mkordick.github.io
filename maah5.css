@@ -12,122 +12,89 @@
    Supporting Files:
 
 */
-body {
-   background: url(gbar.jpg);
-
-}
-
 img {
    border-width: 0px;
 }
 
-
-a {
-   color: white;
-
-}
-a:visited{
-   color: white;
-
-}
-a:active {
-   color: white;
-
+body
+{
+  background: url(gbar.jpg) repeat;
 }
 
-
-/*Table */
-#main{
-    width: 810px;
-     border-spacing: 0px;
-
-}
-#main td{
-    padding: 0px;
+article#one
+{
+  display: block;
+  float: left;
+  width: 13.2%;
+  margin-left: 0px;
+  padding-bottom: 50%;
+  padding-right: 1.5px;
+  margin-right: 1.5px;
 
 }
 
-
-#leftcol {
-   width: 165px;
-   vertical-align: top;
-
-
+section
+{
+  display: block;
+  float: left;
+  width: 25%;
+  padding-right: 1.5px;
+  padding-left: 1.5px;
+  margin-right: 1.5px;
+  margin-left: 1.5px;
 }
 
-#rightcol{
-   width:645px;
-   vertical-align: top;
-}
-#rightcol table{
-    width: 645px;
-    border-spacing: 0px;
-}
-#rightcol table td{
-    padding: 0px;
-
+aside
+{
+  display: block;
+  float: left;
+  width: 26%;
 }
 
-#gcollection{
-    vertical-align: top;
-    text-align: center;
-
+article#two
+{
+  padding-left: 10%;
 }
 
-#article1{
-   width: 320px;
-   vertical-align: top;
-
+article#three
+{
+  background-color: yellow;
 }
 
-#gutter {
-   width: 5px;
-
+section h4, aside h4
+{
+  color: red;
 }
 
-#aside1 {
-   width: 320px;
-   background-color: yellow;
-   vertical-align: top;
+article#three h4
+{
+  color: black;
 }
 
-#aside2{
-   width: 320px;
-   vertical-align: top;
-
+article#one h4
+{
+  color: yellow;
+  text-align: left;
 }
 
-/*Step 6 heading font adjustment*/
+article#one a
+{
+  color: white;
+}
 
-#leftcol h4{
-   color:yellow;
+section img
+{
+  display: block;
+  float: right;
+}
+
+aside img
+{
+  display: block;
+  float: right;
+}
+
+h4
+{
    text-align: center;
-
-}
-
-#article1 h4{
-   text-align: center;
-   color: red;
-
-}
-#aside1 h4{
-   text-align: center;
-
-}
-
-#aside2 h4{
-   text-align: center;
-   color: red;
-
-}
-
-/*Step 6 inline image alignment */
-#article1 img{
-   float: right;
-
-}
-
-#aside2 img{
-   float: right;
-
 }
