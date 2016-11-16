@@ -1,0 +1,100 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 9
+   Case Problem 2
+
+   The Gargoyle Collection HTML5 Style Sheet
+
+   Author: Matt Kordick
+   Date:   10/7/16
+
+   Filename:         maah5.css
+   Supporting Files:
+
+*/
+img {
+   border-width: 0px;
+}
+
+body
+{
+  background: url(gbar.jpg) repeat;
+}
+
+article#one
+{
+  display: block;
+  float: left;
+  width: 13.2%;
+  margin-left: 0px;
+  padding-bottom: 50%;
+  padding-right: 1.5px;
+  margin-right: 1.5px;
+
+}
+
+section
+{
+  display: block;
+  float: left;
+  width: 25%;
+  padding-right: 1.5px;
+  padding-left: 1.5px;
+  margin-right: 1.5px;
+  margin-left: 1.5px;
+}
+
+aside
+{
+  display: block;
+  float: left;
+  width: 26%;
+}
+
+article#two
+{
+  padding-left: 10%;
+}
+
+article#three
+{
+  background-color: yellow;
+}
+
+section h4, aside h4
+{
+  color: red;
+}
+
+article#three h4
+{
+  color: black;
+}
+
+article#one h4
+{
+  color: yellow;
+  text-align: left;
+}
+
+article#one a
+{
+  color: white;
+}
+
+section img
+{
+  display: block;
+  float: right;
+}
+
+aside img
+{
+  display: block;
+  float: right;
+}
+
+h4
+{
+   text-align: center;
+}
