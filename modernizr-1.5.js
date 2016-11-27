@@ -14,7 +14,7 @@
  * LicenseModernizr is available under the MIT and BSD licenses:
 
  * MIT License
- * Copyright (c) 2009ï¿½2010 Faruk Ate?
+ * Copyright (c) 2009–2010 Faruk Ate?
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
