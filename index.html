@@ -5,206 +5,115 @@
    <!--
       New Perspectives on HTML, CSS, and JavaScript
       Tutorial 11
-      Case Problem 2
+      Case Problem 3
 
-      The Math Table Calculator
-      Author: Matt Kordick
-      Date: 11/27/16
+      The Guessing Game
+      Author:  Matt Kordick
+      Date:   12/3/16
 
-      Filename:         calculator.htm
-      Supporting files: bboard.png, modernizr-1.5.js,
-                        mtlogo.png, mtstyles.css
+      Filename:         guess.htm
+      Supporting files: headmenu.jpg, kglog.jpg, kgstyles.css,
+                        links.jpg, modernizr-1.5.js, title.jpg
 
    -->
 
-   <meta charset="UTF-8" />
-     <title>The Math Table Calculator</title>
-     <script src="modernizr-1.5.js" type="text/javascript" ></script>
-     <link href="mtstyles.css" rel="stylesheet" type="text/css" />
+      <meta charset="UTF-8" />
+      <title>Number Guessing Game</title>
+      <script src="modernizr-1.5.js" type="text/javascript" ></script>
+      <link href="kgstyles.css" rel="stylesheet" type="text/css" />
 
-     <script type="text/javascript">
-        function erase() {
-           var cString = document.calculator.calcwindow.value;
-           var strLen = cString.length;
-           var subValue = cString.substr(0, strLen-1);
-           document.calculator.calcwindow.value = subValue;
-        }
+      <script type="text/javascript">
 
 
-        function calcPress(symbol) {
+         function checkEndGame() {
+            if (randNum == guess)  {
+               alert("Congratulations!");
+            } else if (document.guessform.guesses.value == 0) {
+               alert("Game over. The number was: " + randNum);
+            }
+            }
+            var lowest = 1;
+            var size = 500;
+            var randNum;
+            var guess;
+            function generateRandom(){
+              randNum = Math.floor((Math.random() * size) + lowest);
+            }
+            function reportResult(){
+              guess = eval(document.guessform.guess.value);
+              var result;
+                if (guess == randNum){
+                  result = "right!";
 
-           document.calculator.calcwindow.value += symbol;
-        }
+                }
+                if (guess > randNum){
+                  result = "too high";
+                  document.guessform.guesses.value--;
+                }
+                if (guess < randNum) {
+                  result = "too low";
+                  document.guessform.guesses.value--;
+                }
+
+              document.guessform.result.value= result;
+              checkEndGame();
+            }
+            function resetGame(){
+              document.guessform.guesses.value = 10;
+              document.guessform.guess.value = "";
+              document.guessform.result.value = "";
+              generateRandom();
+            }
+
+      </script>
 
 
-        function calcExpression() {
-           var cString = document.calculator.calcwindow.value;
+   </head>
 
-           var cValue = eval(cString);
+   <body onload="generateRandom()">
+      <section id="main">
 
-           document.calculator.calcwindow.value = cValue;
-        }
+         <header>
+            <img src="kglogo.jpg" alt="Kiddergarden" />
+         </header>
 
-        
-        function clearWin() {
-           document.calculator.calcwindow.value = "";
-        }
-     </script>
+         <div id="links">
+            <img src="links.jpg" alt="" />
+         </div>
 
+         <article>
+            <img src="headmenu.jpg" alt="" />
+            <img src="title.jpg" id="h1img" alt="Guessing Game" />
 
+            <form id="guessform" name="guessform" action="" />
+               <p>Our computer has choosen a number from one to 500. You have 10
+                  guesses to pick the number. Enter <b>your guess</b> in the box
+                  below and click the <b>Make Guess</b> button. The computer will
+                  tell you whether your guess is <i>too high</i>, <i>too low</i>,
+                  or <i>right!</i> Keeping guessing until you run out of
+                  guesses or hit the correct number.
+               </p>
+               <p>To play again, click the <b>Play Again</b> button.</p>
 
-  </head>
+               <div id="game">
+                  <label id="lleft" for="guesses">Guesses Left</label>
+                  <input id="guesses" name="guesses" value="10" readonly="readonly" />
 
-  <body>
-     <section id="main">
+                  <label id="lguess" for="guess">Your Guess</label>
+                  <input id="guess" name="guess" type="number"/>
 
-        <header>
-           <div>
-              Username
-              <input type="text" id="user" name="user" size="16" />
-              Password
-              <input type="password" id="pwd" name="pwd" size="16" />
-           </div>
-           <img src="mtlogo.png" alt="the Math Table" />
+                  <input type="button" id="gbutton" value="Guess" onclick="reportResult()"/>
 
-           <nav class="horizontal">
-              <ul>
-                 <li><a href="#">Arithmetic</a></li>
-                 <li><a href="#">Algebra</a></li>
-                 <li><a href="#">Geometry</a></li>
-                 <li><a href="#">Statistics</a></li>
-              </ul>
-           </nav>
-        </header>
+                  <label id="lresult" for="result">Result</label>
+                  <input id="result" name="result" />
 
-        <nav class="vertical">
-           <ul>
-              <li><a href="#">Elementary Addition</a></li>
-              <li><a href="#">Elementary Subtraction</a></li>
-              <li><a href="#">The Multiplication Table</a></li>
-              <li><a href="#">Division</a></li>
-              <li><a href="#">Long Division</a></li>
+                  <input type="button" id="restart" value="Play Again" onclick="resetGame()"/>
+               </div>
+            </form>
+         </article>
 
-              <li class="newgroup"><a href="#">Understanding Decimals</a></li>
-              <li><a href="#">The Powers of Ten</a></li>
+      </section>
 
-              <li class="newgroup"><a href="#">Fractions</a></li>
-              <li><a href="#">Mixed Numbers</a></li>
-              <li><a href="#">Order of Operations</a></li>
-
-              <li class="newgroup"><a href="#">Ratios and Proportions</a></li>
-              <li><a href="#">Percentages</a></li>
-
-              <li class="newgroup"><a href="#">Lowest Common Multiple</a></li>
-              <li><a href="#">Greatest Common Divisor</a></li>
-              <li><a href="#">Prime Factors</a></li>
-
-              <li class="newgroup"><a href="#">Practice Exams</a></li>
-              <li><a href="#">Mental Math Tricks</a></li>
-              <li><a href="#">Calculator</a></li>
-           </ul>
-        </nav>
-
-        <article>
-           <h1>Calculator</h1>
-           <p>Use this online calculator to perform basic calculations
-              and test your work.
-           </p>
-
-           <form id="calculator" name="calculator" action="">
-           <table>
-              <tr>
-                 <td colspan="5">
-                    <textarea id="calcwindow" name="calcwindow"></textarea>
-                 </td>
-              </tr>
-              <tr>
-                 <td colspan="2"></td>
-                 <td colspan="2" onclick=clearWin()>
-                    <input type="button" value="Clear" />
-                 </td>
-                 <td onclick=erase()>
-                    <input type="button" value="<-" />
-                 </td>
-              </tr>
-              <tr>
-                 <td onclick=calcPress('7')>
-                    <input type="button" value="7" />
-                 </td>
-                 <td onclick=calcPress('8')>
-                    <input type="button" value="8" />
-                 </td>
-                 <td onclick=calcPress('9')>
-                    <input type="button" value="9" />
-                 </td>
-                 <td onclick=calcPress('/')>
-                    <input type="button" value="/" />
-                 </td>
-                 <td onclick=calcPress('(')>
-                    <input type="button" value="(" />
-                 </td>
-              </tr>
-              <tr>
-                 <td onclick=calcPress('4')>
-                    <input type="button" value="4" />
-                 </td>
-                 <td onclick=calcPress('5')>
-                    <input type="button" value="5" />
-                 </td>
-                 <td onclick=calcPress('6')>
-                    <input type="button" value="6" />
-                 </td>
-                 <td onclick=calcPress('*')>
-                    <input type="button" value="*" />
-                 </td>
-                 <td onclick=calcPress(')')>
-                    <input type="button" value=")" />
-                 </td>
-              </tr>
-              <tr>
-                 <td onclick=calcPress('1')>
-                    <input type="button" value="1" />
-                 </td>
-                 <td onclick=calcPress('2')>
-                    <input type="button" value="2" />
-                 </td>
-                 <td onclick=calcPress('3')>
-                    <input type="button" value="3" />
-                 </td>
-                 <td onclick=calcPress('-')>
-                    <input type="button" value="-" />
-                 </td>
-                 <td rowspan="2" onclick=calcExpression()>
-                    <input type="button" value="=" />
-                 </td>
-
-              </tr>
-              <tr>
-                 <td colspan="2" onclick=calcPress('0')>
-                    <input type="button" value="0" />
-                 </td>
-                 <td onclick=calcPress('.')>
-                    <input type="button" value="." />
-                 </td>
-                 <td onclick=calcPress('+')>
-                    <input type="button" value="+" />
-                 </td>
-              </tr>
-           </table>
-           </form>
-        </article>
-
-        <footer>
-           The Math Table:
-           <i>A math resource for the homeschooling family</i>
-           <span>
-              <a href="#">About</a>
-              <a href="#">Terms</a>
-              <a href="#">Help</a>
-           </span>
-        </footer>
-
-     </section>
-  </body>
+   </body>
 
 </html>
