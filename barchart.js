@@ -26,66 +26,45 @@
       Shows the race results for each name and party with bar charts created
       based on the votes array
 */
-function totalVotes(votes){
-    var total = 0;
-    for( var i = 0; i < votes.length ; i++){
-      total = total + votes[i];
+function totalVotes(votes) {
+   		var total=0;
+		for (var i=0; i<votes.length; i++) total+=votes[i];
+		return total;
+		}
 
-    }
-    return total;
-}
-function calcPrecent(item, sum){
-  return Math.round(item/sum*100);
-}
-function createBar(partyType,percent)
-{
-    alert("partyType:" + partyType);
-    alert("percent:" + percent);
+		function calcPercent(item, sum) {
+			return Math.round(100*item/sum);
+		}
 
-    var barText;
+		function createBar(partyType, percent) {
+		switch (partyType) {
+		 	case"D": barText="<td class='dem'> </td>";break;
+			case"R": barText="<td class='rep'> </td>";break;
+			case"I": barText="<td class='ind'> </td>";break;
+			case"G": barText="<td class='green'> </td>";break;
+		}
+		 for (var j=1; j<=percent; j++) {
+			 document.write(barText);
+		 }
+		}
 
-    switch(partyType){
-        case "D":
-            barText="<td class='dem'></td>";
-            break;
-        case "R":
-            barText="<td class='rep'></td>";
-            break;
-        case "I":
-            barText="<td class='ind'></td>";
-            break;
-        case "G":
-           barText="<td class='green'></td>";
-           break;
-        case "L":
-           barText="<td class='lib'></td>";
-           break;
-        default: document.write("hi");
-    } // end of switch
+		function showResults(race, name, party, votes) {
+			var totalV=totalVotes(votes);
+			document.write("<h2>"+race+" "+totalV+" votes</h2>");
+			document.write("<table cellspacing='0'>");
+			document.write("<tr><th>Candidate</th><th class='num'>Votes</th><th class='num'>%</th></tr>");
+			for (var i=0; i<name.length; i++) {
+			document.write ("<tr>");
+			document.write("<td>"+name+[i]+" ("+party[i]+")</td>");
+			document.write("<td class='num'> "+votes[i]+",</td>");
 
-    alert("barText:" + barText);
+			var percent = calcPercent(votes[i], totalV);
+			document.write("<td class='num'> ("+percent+"%)</td>");
 
-    for(var i=1; i<percent; i++){
-        document.write(barText);
-    }
-}
- function showResults(race, name, party, votes){
-   var totalv = totalVotes(votes);
-    document.write(<h2>race</h2>);
-    document.write(<table>);
-     document.write(<tr>);
-       document.write(<th>Candidate</th>);
-       document.write(<th class='num'>Votes</th>);
-       document.write(<th class='num'>%</th>);
-    </tr>
-    for(var i = 0; i < name.length; i++){
-      document.write(<tr>);
-      document.write(<td>name (party)</td>);
-      document.write(<td class='num' >votes</td>);
-      var percent = calcPercent(votes, totalV);
-      document.write(<td clas='num'>(percent%)</td>);
-      createBar(party[], percent);
-      document.write(</tr>);
-    }
-  document.write(</table>);
- }
+			createBar(party[i], percent);
+
+			document.write("</tr>");
+
+			}
+			document.write("</table>");
+		}

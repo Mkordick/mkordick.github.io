@@ -59,26 +59,26 @@ article {
 
 
 article h1 {
-   font-size: 22px; 
-   letter-spacing: 5px; 
+   font-size: 22px;
+   letter-spacing: 5px;
    margin: 0px;
 }
 
 article h2 {
-   font-size: 14px; 
-   margin-top: 12px; 
+   font-size: 14px;
+   margin-top: 12px;
    margin-bottom: 0px;
 }
 
 article table {
-   font-size: 10px; 
+   font-size: 10px;
    margin-top: 0px;
    border-collapse: collapse;
 }
 
 article th {
-   width: 170px; 
-   text-align: left; 
+   width: 170px;
+   text-align: left;
    border-bottom: 1px solid black;
 }
 
@@ -87,32 +87,32 @@ article td {
 }
 
 article .num {
-   text-align: right; 
-   width: 50px; 
+   text-align: right;
+   width: 50px;
    padding-right: 5px;
-}   
+}
 
 article .dem {
-   background-color: rgb(174,224,250); 
+   background-color: rgb(174,224,250);
    width: 2px;
 }
 
 article .rep {
-   background-color: red; 
+   background-color: red;
    width: 2px;
 }
 
 article .ind {
-   background-color: rgb(255,192,255); 
+   background-color: rgb(255,192,255);
    width: 2px;
 }
 
 article .green {
-   background-color: rgb(128,255,128); 
+   background-color: rgb(128,255,128);
    width: 2px;
 }
 
 article .lib {
-   background-color: cyan; 
+   background-color: cyan;
    width: 2px;
 }
